@@ -63,43 +63,43 @@
 .balls.first{
     top: 20px;
     left: -20px;
-    background: #fffc00;
+    background: radial-gradient(circle at 65% 15%, #fbf9ff, #8b7a2f);
 }
 
 .balls.second{
     top: 50px;
     left: 20px;
-    background: #7478dc;
+    background: radial-gradient(circle at 65% 15%, #83ffcf, #8b3430);
 }
 
 .balls.third{
     top: 90px;
     left: -28px;
-    background: #dc8aa0;
+    background: radial-gradient(circle at 65% 15%, #fffff5, #33a4be);
 }
 
 .balls.four{
      top: 140px;
      left: 8px;
-    background: #dc9f4a;
+    background: radial-gradient(circle at 65% 15%, #fbffff, #338b49);
  }
 
 .balls.five{
     top: 180px;
     left: -60px;
-    background: #6ddc76;
+    background: radial-gradient(circle at 65% 15%, #f3fffd, #c17c2d);
 }
 
 .balls.six{
     top: 210px;
     left: 50px;
-    background: #8c6fdc;
+    background: radial-gradient(circle at 65% 15%, #fdf4ff, #8b4379);
 }
 
 .balls.seven{
     top: 250px;
     left: -40px;
-    background: #dcc846;
+    background: radial-gradient(circle at 65% 15%, #f6f4ff, #d2dc46);
 }
 
 .balls:hover{
