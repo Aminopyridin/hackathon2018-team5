@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.css';
+import icewall from "../image/icewall.png";
 import {createMap, getMove, isInsideOfMap, moveStar, isGameFinished} from "../GameManager";
 
 export default class Labyrinth extends React.Component {
