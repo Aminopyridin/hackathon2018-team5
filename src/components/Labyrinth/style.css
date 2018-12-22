@@ -1,14 +1,70 @@
 .labyrinth {
     width: 500px;
     height: 300px;
-    border: 2px solid blue;
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*border: 2px solid blue;*/
     /*position: absolute;*/
 }
 
 .wall {
-
+    width: 50px;
+    height: 50px;
+    background: black;
 }
 
-.star {
+.wallt {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
 
+.row1 {
+    position: absolute;
+    left: 0px;
+}
+
+.row2 {
+     position: absolute;
+     left: 50px;
+}
+
+.row3 {
+    position: absolute;
+    left: 100px;
+}
+
+.row4 {
+    position: absolute;
+    left: 150px;
+}
+
+.row5 {
+    position: absolute;
+    left: 200px;
+}
+
+.row6 {
+    position: absolute;
+    left: 250px;
+}
+
+.row7 {
+    position: absolute;
+    left: 300px;
+}
+
+.row8 {
+    position: absolute;
+    left: 350px;
+}
+
+.row9 {
+    position: absolute;
+    left: 400px;
+}
+
+.row10 {
+    position: absolute;
+    left: 450px;
 }
