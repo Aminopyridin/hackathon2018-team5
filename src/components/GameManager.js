@@ -16,6 +16,7 @@ export const getMove = function (clickEvent) {
     if (clickEvent.keyCode === 37 /* left */ || clickEvent.keyCode === 65 /* a */) {
         return {dx: -1, dy: 0};
     }
+    return {dx: 0, dy: 0};
 };
 
 export const createMap = function () {
