@@ -1,5 +1,6 @@
 import styles from "./Labyrinth/style.css";
 import star from "./image/star.png";
+import icewall from "./image/icewall.png"
 import React from "react";
 
 export const getMove = function (clickEvent) {
@@ -55,6 +56,7 @@ export const getElementByType = function (type, i) {
         case 1:
             return (
                 <div className={styles.wall} key={i}>
+                    <img src={icewall} width={'50px'} height={'50px'} alt="icewall"/>
                 </div>);
         case 2:
             return (
