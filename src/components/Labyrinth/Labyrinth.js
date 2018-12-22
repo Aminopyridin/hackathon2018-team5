@@ -1,5 +1,5 @@
 import React from 'react';
-import {getElementByType, createMap, getMove, isInsideOfMap, moveStar, isGameFinished} from "../GameManager";
+import {getMove2, getElementByType, createMap, getMove, isInsideOfMap, moveStar, isGameFinished} from "../GameManager";
 
 export default class Labyrinth extends React.Component {
     constructor(props) {
@@ -19,7 +19,11 @@ export default class Labyrinth extends React.Component {
     }
 
     onKeyPressed(clickEvent) {
-        const move = getMove(clickEvent);
+        const rnd = Math.floor(Math.random() * 2);
+        const move = rnd === 0
+            ? getMove(clickEvent)
+            : getMove2(clickEvent);
+
         const oldPos = this.state.starPos;
         const newPos = {x: oldPos.x + move.dx, y: oldPos.y + move.dy,};
         if (!isInsideOfMap(this.state, newPos)) {
