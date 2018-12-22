@@ -42,7 +42,6 @@ export default class Labyrinth extends React.Component {
                 starPos: newPos,
                 map: newMap
             });
-            console.log(newMap);
         }
     }
 }
