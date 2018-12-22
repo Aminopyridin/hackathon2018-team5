@@ -18,12 +18,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.starWrapper{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    transition-property: all;
-    transition-timing-function: ease;
-}

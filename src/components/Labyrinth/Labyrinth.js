@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './style.css';
-import {createMap, getMove, isInsideOfMap, moveStar, isGameFinished} from "../GameManager";
+import {getElementByType, createMap, getMove, isInsideOfMap, moveStar, isGameFinished} from "../GameManager";
 
 export default class Labyrinth extends React.Component {
     constructor(props) {
@@ -13,141 +12,10 @@ export default class Labyrinth extends React.Component {
     }
 
     render() {
-        return (
-            <div className={styles.labyrinth}>
-                <div className={styles.row1}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wallt}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row2}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row3}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-
-                <div className={styles.row4}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row5}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row6}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row7}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row8}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row9}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-                <div className={styles.row10}>
-                    <div className={styles.wall}/>
-
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wall}/>
-                    <div className={styles.wallt}/>
-
-                    <div className={styles.wall}/>
-                </div>
-
-            </div>
-        );
+        return this.state.map.map((y, i) =>
+            (<div style={{left: i * 50}} key={i}>
+                {y.map(getElementByType)}
+            </div>));
     }
 
     onKeyPressed(clickEvent) {
