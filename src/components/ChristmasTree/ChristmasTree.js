@@ -6,10 +6,13 @@ export default class ChristmasTree extends React.Component {
         return (
             <div className={styles.tree}>
                 <div className={styles.base} />
-                <div className={styles.layer} />
-                <div className={`${styles.layer} ${styles.two}`} />
-                <div className={`${styles.layer} ${styles.three}`} />
                 <div className={`${styles.layer} ${styles.four}`} />
+                <div className={`${styles.layer} ${styles.three}`} />
+                <div className={`${styles.layer} ${styles.two}`} />
+                <div className={styles.layer}>
+                    <div className={`${styles.balls} ${styles.first}`} />
+                    <div className={`${styles.balls} ${styles.second}`} />
+                </div>
             </div>
         );
     }
