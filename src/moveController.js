@@ -12,3 +12,5 @@ export function GetMove(clickEvent) {
         return {move: 'left'};
     }
 }
+
+// EXAMPLE
