@@ -1,8 +1,8 @@
 (function(){
 
     let flakeNum = 20;
-    let pic = new Image(10,10);
-    pic.src = "https://avatanplus.com/files/resources/mid/587b4c9329f9b159a1a31ee4.png";
+    let pic = new Image(5,5);
+    pic.src = "https://i.pinimg.com/originals/53/8f/81/538f816fdecb460e0d80ec4037cefa27.png";
     let d = document;
     let deg = 180/3.14;
     let rad = 3.14/180;
