@@ -5,6 +5,7 @@ export default class Labyrinth extends React.Component {
     render () {
         return (
             <div className={styles.labyrinth}>
+
                 {/*<div className={styles.base} />*/}
                 {/*<div className={styles.layer} />*/}
                 {/*<div className={`${styles.layer} ${styles.two}`} />*/}

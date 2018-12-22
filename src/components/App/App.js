@@ -11,6 +11,7 @@ export default class App extends React.Component {
                 <div className={styles.treeWrapper}>
                     <ChristmasTree />
                 </div>
+
                 <div className={styles.labyrinthWrapper}>
                     <Labyrinth />
                 </div>
