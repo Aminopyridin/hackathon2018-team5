@@ -5,16 +5,16 @@ import React from "react";
 
 export const getMove = function (clickEvent) {
     if (clickEvent.keyCode === 38 /* up */ || clickEvent.keyCode === 87 /* w */) {
-        return {dx: 0, dy: -1};
+        return {dx: -1, dy: 0};
     }
     if (clickEvent.keyCode === 39 /* right */ || clickEvent.keyCode === 68 /* d */) {
-        return {dx: 1, dy: 0};
-    }
-    if (clickEvent.keyCode === 40 /* down */ || clickEvent.keyCode === 83 /* s */) {
         return {dx: 0, dy: 1};
     }
+    if (clickEvent.keyCode === 40 /* down */ || clickEvent.keyCode === 83 /* s */) {
+        return {dx: 1, dy: 0};
+    }
     if (clickEvent.keyCode === 37 /* left */ || clickEvent.keyCode === 65 /* a */) {
-        return {dx: -1, dy: 0};
+        return {dx: 0, dy: -1};
     }
     return {dx: 0, dy: 0};
 };
