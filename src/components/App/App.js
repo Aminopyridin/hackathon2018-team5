@@ -4,15 +4,15 @@ import Labyrinth from '../Labyrinth/Labyrinth';
 import styles from './style.css';
 
 export default class App extends React.Component {
-    render () {
+    render() {
         return (
             <div className={styles.app}>
                 <div className={styles.treeWrapper}>
-                    <ChristmasTree />
+                    <ChristmasTree/>
                 </div>
 
                 <div className={styles.labyrinthWrapper}>
-                    <Labyrinth />
+                    <Labyrinth/>
                 </div>
             </div>
         );

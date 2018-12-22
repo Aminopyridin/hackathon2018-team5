@@ -1,31 +1,11 @@
 .labyrinth {
     width: 500px;
     height: 300px;
-    /*display: flex;*/
-    /*justify-content: flex-start;*/
-    /*border: 2px solid blue;*/
-    /*position: absolute;*/
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.wall {
-    width: 50px;
-    height: 50px;
-    background: url("../image/icewall.png");
-    background-size: cover;
-}
-
-.empty {
-    width: 50px;
-    height: 50px;
-    background: transparent;
-}
-
-.row {
-    position: absolute;
-    left: 0px;
-}
-
-.star {
-    width: 50px;
+.block {
+    width: 10%;
     height: 50px;
 }

@@ -1,26 +1,11 @@
 import styles from "./Labyrinth/style.css";
 import star from "./image/star.png";
-import icewall from "./image/icewall.png"
+import iceWall from "./image/icewall.png";
+import finish from "./image/finish.png";
 import React from "react";
 
 export const getMove = function (clickEvent) {
     if (clickEvent.keyCode === 38 /* up */ || clickEvent.keyCode === 87 /* w */) {
-        return {dx: -1, dy: 0};
-    }
-    if (clickEvent.keyCode === 39 /* right */ || clickEvent.keyCode === 68 /* d */) {
-        return {dx: 0, dy: 1};
-    }
-    if (clickEvent.keyCode === 40 /* down */ || clickEvent.keyCode === 83 /* s */) {
-        return {dx: 1, dy: 0};
-    }
-    if (clickEvent.keyCode === 37 /* left */ || clickEvent.keyCode === 65 /* a */) {
-        return {dx: 0, dy: -1};
-    }
-    return {dx:0,dy:0};
-};
-
-export const getMove2 = function (clickEvent) {
-    if (clickEvent.keyCode === 38 /* up */ || clickEvent.keyCode === 87 /* w */) {
         return {dx: 0, dy: -1};
     }
     if (clickEvent.keyCode === 39 /* right */ || clickEvent.keyCode === 68 /* d */) {
@@ -32,18 +17,7 @@ export const getMove2 = function (clickEvent) {
     if (clickEvent.keyCode === 37 /* left */ || clickEvent.keyCode === 65 /* a */) {
         return {dx: -1, dy: 0};
     }
-    return {dx:0,dy:0};
-};
-
-export const createMap = function () {
-    return [
-        [0, 0, 1, 0, 1, 1, 1, 0, 1, 0],
-        [1, 0, 1, 0, 1, 0, 0, 0, 1, 0],
-        [1, 0, 1, 0, 1, 1, 1, 0, 1, 0],
-        [1, 0, 1, 0, 0, 0, 1, 0, 1, 0],
-        [1, 0, 0, 0, 1, 0, 1, 0, 1, 0],
-        [1, 0, 0, 1, 0, 0, 0, 0, 0, 2]
-    ];
+    return {dx: 0, dy: 0};
 };
 
 export const moveStar = function (map, oldPos, newPos) {
@@ -60,25 +34,19 @@ export const isGameFinished = function (map) {
 export const isInsideOfMap = function ({map}, pos) {
     return pos.x >= 0 &&
         pos.y >= 0 &&
-        pos.x <= map[0].length - 1 &&
-        pos.y <= map.length - 1;
+        pos.x < map[0].length &&
+        pos.y < map.length;
 };
 
 export const getElementByType = function (type, i) {
     switch (type) {
         case 0:
-            return (
-                <div className={styles.empty} key={i}>
-                </div>);
+            return (<div className={styles.block} key={i}/>);
         case 1:
-            return (
-                <div className={styles.wall} key={i}>
-                    <img src={icewall} width={'50px'} height={'50px'} alt="icewall"/>
-                </div>);
+            return (<img className={styles.block} key={i} src={iceWall} alt='IceWall'/>);
         case 2:
-            return (
-                <div className={styles.star} key={i}>
-                    <img src={star} width={'50px'} height={'50px'} alt="star"/>
-                </div>);
+            return (<img className={styles.block} key={i} src={star} alt="Star"/>);
+        case 3:
+            return (<img className={styles.block} key={i} src={finish} alt="Finish"/>);
     }
-}
+};
