@@ -8,6 +8,9 @@ body {
 }
 
 body {
-    background: url("./components/image/background.png") no-repeat center fixed ;
-    background-size: 130%;
+    background: url("./components/image/background.png") no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
