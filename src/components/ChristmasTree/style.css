@@ -1,7 +1,9 @@
 .tree {
     position: relative;
-    width: 200px;
-    height: 300px;
+    width: 230px;
+    height: 400px;
+    background: url("../image/tree.png");
+    background-size: cover;
 }
 
 .base {
@@ -18,10 +20,8 @@
     position: absolute;
     width: 0;
     height: 0;
-    left: 50px;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid #499F68;
+    left: 120px;
+    top: 50px;
 }
 
 .layer.two{
@@ -49,4 +49,60 @@
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     border-bottom: 200px solid #499F68;
+}
+
+.balls {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+.balls.first{
+    top: 20px;
+    left: -20px;
+    background: #fffc00;
+}
+
+.balls.second{
+    top: 50px;
+    left: 20px;
+    background: #7478dc;
+}
+
+.balls.third{
+    top: 90px;
+    left: -28px;
+    background: #dc8aa0;
+}
+
+.balls.four{
+     top: 140px;
+     left: 8px;
+    background: #dc9f4a;
+ }
+
+.balls.five{
+    top: 180px;
+    left: -60px;
+    background: #6ddc76;
+}
+
+.balls.six{
+    top: 210px;
+    left: 50px;
+    background: #8c6fdc;
+}
+
+.balls.seven{
+    top: 250px;
+    left: -40px;
+    background: #dcc846;
+}
+
+.balls:hover{
+    background: url("../image/pepe.png");
+    background-size: cover;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {getElementByType, createMap, getMove, isInsideOfMap, moveStar, isGameFinished} from "../GameManager";
 
+
 export default class Labyrinth extends React.Component {
     constructor(props) {
         super(props);
