@@ -53,8 +53,8 @@
 
 .balls {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     left: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -103,5 +103,6 @@
 }
 
 .balls:hover{
-    background: #595953;
+    background: url("../image/pepe.png");
+    background-size: cover;
 }
