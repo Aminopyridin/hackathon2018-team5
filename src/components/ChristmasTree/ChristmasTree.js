@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './style.css';
-
+import star from '../image/star.png';
+import PropTypes from 'prop-types';
 export default class ChristmasTree extends React.Component {
     render() {
         return (
@@ -13,8 +14,14 @@ export default class ChristmasTree extends React.Component {
                     <div className={`${styles.balls} ${styles.five}`}/>
                     <div className={`${styles.balls} ${styles.six}`}/>
                     <div className={`${styles.balls} ${styles.seven}`}/>
+                    {this.props.isFinished && <img className={styles.star} src={star} width={'50px'} height={'50px'}/>}
                 </div>
             </div>
         );
     }
 }
+
+ChristmasTree.propTypes ={
+    isFinished : PropTypes.bool
+};
+

@@ -18,3 +18,13 @@
     justify-content: center;
     align-items: center;
 }
+
+.box{
+    z-index: -1;
+    position: relative;
+    align-items: center;
+    top: 120px;
+    right: 13%;
+    display: flex;
+    min-width: 40%;
+}

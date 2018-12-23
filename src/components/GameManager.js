@@ -20,7 +20,7 @@ export const getMove = function (clickEvent) {
     return {dx: 0, dy: 0};
 };
 
-export const moveStar = function (map, oldPos, newPos) {
+export const makeStep = function (map, oldPos, newPos) {
     let newMap = map.slice();
     newMap[oldPos.y][oldPos.x] = 0;
     newMap[newPos.y][newPos.x] = 2;

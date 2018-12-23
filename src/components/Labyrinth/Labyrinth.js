@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './style.css';
-import {getElementByType, getMove, isInsideOfMap, moveStar, isGameFinished} from "../GameManager";
+import PropTypes from 'prop-types';
+import {getElementByType, getMove, isInsideOfMap, makeStep, isGameFinished} from "../GameManager";
 
 const startState = {
     starPos: {x: 9, y: 5},
@@ -11,7 +12,8 @@ const startState = {
         [1, 0, 1, 0, 0, 0, 1, 0, 1, 0],
         [1, 0, 0, 0, 1, 0, 1, 0, 1, 0],
         [1, 0, 0, 1, 0, 0, 0, 0, 0, 2]
-    ]
+    ],
+    isFinished : false
 };
 
 export default class Labyrinth extends React.Component {
@@ -30,7 +32,7 @@ export default class Labyrinth extends React.Component {
 
     onKeyPressed(clickEvent) {
         const state = this.state;
-        if (isGameFinished(state.map)) {
+        if (state.isFinished) {
             return;
         }
         const move = getMove(clickEvent);
@@ -41,14 +43,22 @@ export default class Labyrinth extends React.Component {
         }
         const elementAtNewPos = state.map[newPos.y][newPos.x];
         if (elementAtNewPos !== 1) {
-            const newMap = moveStar(state.map, oldPos, newPos);
+            const newMap = makeStep(state.map, oldPos, newPos);
+            let isFinished = false;
+            if (isGameFinished(newMap)) {
+                this.props.onWin();
+                newMap[0][0] = 0;
+                isFinished = true;
+            }
             this.setState({
                 starPos: newPos,
-                map: newMap
+                map: newMap,
+                isFinished : isFinished
             });
-            if (isGameFinished(newMap)) {
-                alert('YOU WON!');
-            }
         }
     }
 }
+
+Labyrinth.propTypes = {
+    onWin: PropTypes.func
+};
